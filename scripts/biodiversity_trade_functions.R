@@ -26,10 +26,12 @@ faup.model = function (t, x, params){
   s1 = params["s1"]
   d1 = params["d1"]
   a1 = params["a1"]
-  e = params["e"]
+  e = params["e"] # this is equivalent to the parameter 'p' in the model's written equations, but we use 'e' here to reduce
+  # the possibility of confusion with parameters P1 and P2
   h = params["h"]
   r = params["r"]
-  m1 = params["m1"]
+  m1 = params["m1"] # the parameter 'm' in the model's written equations is equal to d1*m1 or d2*m2, here we split m
+  # into two parameters to provide more flexibility in simulating different scenarios
   
   s2 = params["s2"]
   d2 = params["d2"]
